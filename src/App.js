@@ -1,47 +1,36 @@
 import './App.css';
-import { useState } from 'react';
-import { data } from "./data/data"
+import Home from "./component/home/home"
+import Game from "./component/game/game"
+import SetupNbPlayer from "./component/setup/setup1"
+import SetupPlayerNames from "./component/setup/setup2"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-import Home from "./component/home"
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
-function getNext(tmp) {
-  const names = ["Dalia", "Gautier", "Sacha", "Suzana"];
-  let k = 3;
-
-  while (tmp.search("...") >= 0 && k > 0){
-    const i = getRandomInt(names.length)
-    tmp = tmp.replace("...", names[i])
-    names.splice(i, 1);
-    --k;
-  }
-  return (tmp);
-}
 
 function App() {
-  const [index, setIndex] = useState(0);
-  const [text, setText] = useState(data[0]);
-  
   return (
     <div className="App">
-      <div id="card">
-        <p id="question">{text}</p>
-      </div>
-      <button id="next" onClick={() => {
-        if(index < data.length) {
-          console.log("increment")
-          setIndex(index + 1);
-        }
-        if(index >= data.length) {
-          console.log("reset")
-          setIndex(0);
-        }  
-        setText(getNext(data[index]))
-        }}>Next</button>
-        
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/setup1">
+            <SetupNbPlayer />
+          </Route>
+          <Route path="/setup2">
+            <SetupPlayerNames test={78}/>
+          </Route>
+          <Route path="/game">
+            <Game />
+          </Route>
+        </Switch>
+      </Router>
+      
     </div>
   );
 }

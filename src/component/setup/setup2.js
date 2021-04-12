@@ -1,26 +1,16 @@
-import { getNodeText } from "@testing-library/react";
-import { useState } from "react";
 import "./setup.css";
-import { Link, useLocation } from "react-router-dom"
-import { Component } from "react";
+import { Link } from "react-router-dom"
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux'
+import * as actions from "./../../redux/action/action"
 
-
-class SetupPlayerNames extends Component {
-    constructor(props) {
-        super(props);
-        console.log(props)
-        this.state = {
-            nbPlayer: props.nbplayer
-        }
-    }
-    
-    render() {
+function SetupPlayerNames()  {
         let tab = []; 
-        let inputs = "";
+        const nbPlayer = useSelector(state => state.nbPlayers)
+        const dispatch = useDispatch();
 
-        for (let i = 0; this.state.nbPlayer < 3; ++i) {
+        for (let i = 0; i < nbPlayer; ++i) {
             tab.push(i);
-            inputs += <input type="text"></input>
         }
         return (
             <div id="setup2">
@@ -29,11 +19,16 @@ class SetupPlayerNames extends Component {
                         <input className="names" type="text" id={"name" + (i + 1)} placeholder={"player" + (i + 1)}></input>
                     )
                 })}
-                <Link className="link" to="/game">Next</Link>
+                <Link className="link" to="/game" onClick={() => {
+                    for (let i = 0; i < nbPlayer; ++i) {
+                        const tmp = "name" + (1 + i);
+                        const value = document.getElementById(tmp).value;
+                        console.log(value);
+                        dispatch(actions.addPlayer(value));
+                    }
+                }}>Next</Link>
             </div>
-        )
-    }
-    
+        )  
 }
 
 export default SetupPlayerNames;

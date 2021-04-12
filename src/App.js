@@ -23,7 +23,7 @@ function App() {
             <SetupNbPlayer />
           </Route>
           <Route path="/setup2">
-            <SetupPlayerNames test={78}/>
+            <SetupPlayerNames/>
           </Route>
           <Route path="/game">
             <Game />

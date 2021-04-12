@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { data } from "./../../data/data"
 import "./game.css"
+import { useSelector } from 'react-redux';
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
   
-function getNext(tmp) {
-    const names = ["Dalia", "Gautier", "Sacha", "Suzana"];
-    let k = 3;
+function getNext(tmp, players) {
+    const names = [...players];
+    let k = names.length;
   
     while (tmp.search("...") >= 0 && k > 0){
         const i = getRandomInt(names.length)
@@ -22,21 +23,20 @@ function getNext(tmp) {
 function Game() {
     const [index, setIndex] = useState(0);
     const [text, setText] = useState(data[0]);
+    const players = useSelector(state => state.players);
+    console.log(players);
 
     document.body.onkeyup = function(e){
-        if(e.code == 'Space'){
+        if(e.code === 'Space'){
             if(index < data.length) {
-                console.log("increment")
                 setIndex(index + 1);
             }
             if(index >= data.length) {
-                console.log("reset")
                 setIndex(0);
             } 
-            setText(getNext(data[index]))
+            setText(getNext(data[index], players))
         }
     }
-    console.log(data.length, index);
     return (
         <div id="game">
             <div className="circle" id="c1"></div>

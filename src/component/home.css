@@ -1,0 +1,37 @@
+#Home {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+#play {
+    height: 70px;
+    width: 150px;
+    font-size: 60px;
+    border:none;
+    background-color: black;
+    color: white;
+}
+
+#play:hover {
+    font-size: 80px;
+    animation-name: play;
+    animation-duration: 1s;
+}
+
+@keyframes play {
+    from {font-size: 60px;}
+    to {font-size: 80px;}
+  }

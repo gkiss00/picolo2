@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { data } from "./../../data/data"
 import "./game.css"
 import { useSelector } from 'react-redux';
-import basic from "./../../data/basique.mp3"
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -40,18 +39,6 @@ function Game() {
             } 
             const text = getNext(data[index], players)
             setText(text)
-            var synth = window.speechSynthesis;
-            var voices = synth.getVoices();
-            for (let i = 0; i < voices.length; ++i){
-                console.log(voices[i].lang)
-            }
-            const utterance = new SpeechSynthesisUtterance(text)
-            //if (voices[4] != undefined)
-            utterance.voice = voices[4]
-            utterance.rate = 0.8
-            utterance.pitch = 8
-            window.speechSynthesis.speak(utterance)
-            
         }
     }
     return (

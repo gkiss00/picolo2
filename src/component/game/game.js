@@ -47,10 +47,11 @@ function Game() {
             }
             const utterance = new SpeechSynthesisUtterance(text)
             //if (voices[4] != undefined)
-            //utterance.voice = voices[4]
+            utterance.voice = voices[4]
             utterance.rate = 0.8
             utterance.pitch = 8
             window.speechSynthesis.speak(utterance)
+            
         }
     }
     return (

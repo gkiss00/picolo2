@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/picolo/static/css/main.d29d23cf.chunk.css",
+    "main.js": "/picolo/static/js/main.e2b99512.chunk.js",
+    "main.js.map": "/picolo/static/js/main.e2b99512.chunk.js.map",
+    "runtime-main.js": "/picolo/static/js/runtime-main.a492ee00.js",
+    "runtime-main.js.map": "/picolo/static/js/runtime-main.a492ee00.js.map",
+    "static/js/2.2d88e034.chunk.js": "/picolo/static/js/2.2d88e034.chunk.js",
+    "static/js/2.2d88e034.chunk.js.map": "/picolo/static/js/2.2d88e034.chunk.js.map",
+    "static/js/3.53fc1522.chunk.js": "/picolo/static/js/3.53fc1522.chunk.js",
+    "static/js/3.53fc1522.chunk.js.map": "/picolo/static/js/3.53fc1522.chunk.js.map",
+    "index.html": "/picolo/index.html",
+    "static/css/main.d29d23cf.chunk.css.map": "/picolo/static/css/main.d29d23cf.chunk.css.map",
+    "static/js/2.2d88e034.chunk.js.LICENSE.txt": "/picolo/static/js/2.2d88e034.chunk.js.LICENSE.txt",
+    "static/media/basique.bf50bd79.mp3": "/picolo/static/media/basique.bf50bd79.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a492ee00.js",
+    "static/js/2.2d88e034.chunk.js",
+    "static/css/main.d29d23cf.chunk.css",
+    "static/js/main.e2b99512.chunk.js"
+  ]
+}

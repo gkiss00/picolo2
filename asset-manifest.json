@@ -1,23 +1,15 @@
 {
   "files": {
-    "main.css": "/picolo2/static/css/main.d29d23cf.chunk.css",
-    "main.js": "/picolo2/static/js/main.e2b99512.chunk.js",
-    "main.js.map": "/picolo2/static/js/main.e2b99512.chunk.js.map",
-    "runtime-main.js": "/picolo2/static/js/runtime-main.8713dbf7.js",
-    "runtime-main.js.map": "/picolo2/static/js/runtime-main.8713dbf7.js.map",
-    "static/js/2.2d88e034.chunk.js": "/picolo2/static/js/2.2d88e034.chunk.js",
-    "static/js/2.2d88e034.chunk.js.map": "/picolo2/static/js/2.2d88e034.chunk.js.map",
-    "static/js/3.53fc1522.chunk.js": "/picolo2/static/js/3.53fc1522.chunk.js",
-    "static/js/3.53fc1522.chunk.js.map": "/picolo2/static/js/3.53fc1522.chunk.js.map",
+    "main.css": "/picolo2/static/css/main.dcf2270b.css",
+    "main.js": "/picolo2/static/js/main.2f58def6.js",
+    "static/js/787.1cffadb7.chunk.js": "/picolo2/static/js/787.1cffadb7.chunk.js",
     "index.html": "/picolo2/index.html",
-    "static/css/main.d29d23cf.chunk.css.map": "/picolo2/static/css/main.d29d23cf.chunk.css.map",
-    "static/js/2.2d88e034.chunk.js.LICENSE.txt": "/picolo2/static/js/2.2d88e034.chunk.js.LICENSE.txt",
-    "static/media/basique.bf50bd79.mp3": "/picolo2/static/media/basique.bf50bd79.mp3"
+    "main.dcf2270b.css.map": "/picolo2/static/css/main.dcf2270b.css.map",
+    "main.2f58def6.js.map": "/picolo2/static/js/main.2f58def6.js.map",
+    "787.1cffadb7.chunk.js.map": "/picolo2/static/js/787.1cffadb7.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.8713dbf7.js",
-    "static/js/2.2d88e034.chunk.js",
-    "static/css/main.d29d23cf.chunk.css",
-    "static/js/main.e2b99512.chunk.js"
+    "static/css/main.dcf2270b.css",
+    "static/js/main.2f58def6.js"
   ]
 }

@@ -30,9 +30,6 @@ function Game() {
         if(e.code === 'Space'){
             if(index < data.length) {
                 setIndex(index + 1);
-                //const audio = new Audio(basic)
-                //console.log(audio);
-                //audio.play();
             }
             if(index >= data.length) {
                 setIndex(0);
@@ -41,11 +38,23 @@ function Game() {
             setText(text)
         }
     }
+
+    const goNext = (event) => {
+        event.preventDefault();
+        if(index < data.length) {
+            setIndex(index + 1);
+        }
+        if(index >= data.length) {
+            setIndex(0);
+        } 
+        const text = getNext(data[index], players)
+        setText(text)
+    }
     return (
         <div id="game">
             <div className="circle" id="c1"></div>
             <div className="circle" id="c2"></div>
-            <div id="card">
+            <div id="card" onClick={goNext}>
                 <p id="question">{text}</p>
             </div>
         </div>
